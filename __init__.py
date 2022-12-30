@@ -12,8 +12,12 @@ def create_app(config_class=Config):
     db.init_app(app)
 
     # blueprint for auth routes in our app
-    from .auth import auth as auth_blueprint
+    from .views.auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
+
+    # blueprint for auth routes in our app
+    from .views.image import image as image_blueprint
+    app.register_blueprint(image_blueprint)
 
     # blueprint for non-auth parts of app
     from .app import main as main_blueprint
