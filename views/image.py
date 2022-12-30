@@ -6,9 +6,9 @@ image = Blueprint('image', __name__)
 
 @image.route('/image/', methods=['POST'])
 def create_image():
-    return 'Index'
+    return 'Create Image'
 
 
 @image.route('/image/update/<id>', methods=['DELETE', 'UPDATE'])
 def update_image():
-    return 'Profile'
+    return 'Update Image'
