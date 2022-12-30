@@ -1,8 +1,9 @@
-from ..extensions import db
+from . import db
 
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    created_by_login = db.Column(db.String(100))
     name = db.Column(db.String(100))
     image_link = db.Column(db.String(300))
     price = db.Column(db.Integer)
