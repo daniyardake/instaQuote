@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from .. import db
+from . import db
 
 image = Blueprint('image', __name__)
 
